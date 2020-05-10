@@ -43,8 +43,12 @@ namespace PDF_Duplexer {
         }
 
         private void CleanUp(string path1, string path2) {
-            File.Delete(path1);
-            File.Delete(path2);
+            try {
+                File.Delete(path1);
+                File.Delete(path2);
+            } catch {
+                MessageBox.Show("Temporary PDF files couldn't be deleted!");
+            }
         }
         private void Print() {
             // Protects accidentally deleting an existing file in Downloads:
@@ -116,9 +120,6 @@ namespace PDF_Duplexer {
                 return;
             } else
                 return;
-        }
-        private void FrmMain_Load(object sender, EventArgs e) {
-            
         }
 
         private void BtnPrint_Click(object sender, EventArgs e) {

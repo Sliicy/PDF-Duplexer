@@ -36,7 +36,7 @@
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(306, 51);
             this.btnPrint.TabIndex = 0;
-            this.btnPrint.Text = "&Print";
+            this.btnPrint.Text = "&Print newest PDF in Downloads";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
             // 
@@ -67,7 +67,6 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PDF Duplexer";
-            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.ResumeLayout(false);
 
         }
